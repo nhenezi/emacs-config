@@ -1,21 +1,17 @@
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(standard-indent 2))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- )
-(load-file "~/.emacs.d/color-theme/themes/tango.el")
-(color-theme-tango)
-(setq default-directory "/var/www/" )
-(setq-default tab-width 2) ; set tab width to 4 for all buffers
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'forward) ;defines style for unique names
-(setq uniquify-strip-common-suffix t) ;stripes slashes for faster switching
-(require 'linum)
-(global-linum-mode);enables line numbergin
+;;
+;;; THEMES
+(load-file "~/.emacs.d/color-theme/themes/tango.el")  ; loads tango color theme
+(color-theme-tango)                                   ; sets color theme to tango
+
+;; EDITING OPTIONS
+(custom-set-variables '(standard-indent 2))           ; sets default indent to 2
+(setq-default tab-width 2)                            ; set tab width to 2 for all buffers
+(require 'uniquify)                                   ; requiered for unique names
+(setq uniquify-buffer-name-style 'forward)            ; defines style for unique names
+(setq uniquify-strip-common-suffix t)                 ; stripes slashes for faster switching
+(require 'linum)                                      ; required for line numbering
+(global-linum-mode)                                   ; enables line numbering 
+(put 'dired-find-alternate-file 'disabled nil)        ; dired uses only one buffer
+
+;; BINDINGS
+(global-set-key (kbd "M-g") 'goto-line)
