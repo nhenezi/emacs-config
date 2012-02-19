@@ -12,6 +12,24 @@
 (require 'linum)                                      ; required for line numbering
 (global-linum-mode)                                   ; enables line numbering 
 (put 'dired-find-alternate-file 'disabled nil)        ; dired uses only one buffer
+(menu-bar-mode -1)                                    ; hides menu bar
+(tool-bar-mode -1)                                    ; hides tool bar
+(scroll-bar-mode -1)                                  ; hides scroll bar
+
+;; FUNCTIONS
+(defun toggle-fullscreen ()                           ; full screen mode
+  (interactive)
+  (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen)
+                                           nil
+                                           'fullboth)))
+
 
 ;; BINDINGS
 (global-set-key (kbd "M-g") 'goto-line)
+(global-set-key [(meta reuurn)] 'toggle-fullscreen)
+
+
+;; PYTHON
+;; Python Hook
+(add-hook 'python-mode-hook '(lambda () 
+ (setq python-indent 2)))
