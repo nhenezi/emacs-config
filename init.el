@@ -26,7 +26,7 @@
 
 ;; BINDINGS
 (global-set-key (kbd "M-g") 'goto-line)
-(global-set-key [(meta reuurn)] 'toggle-fullscreen)
+(global-set-key [(meta return)] 'toggle-fullscreen)
 
 
 ;; PYTHON
