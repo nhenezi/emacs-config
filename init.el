@@ -1,6 +1,8 @@
-;;
+(add-to-list 'load-path "~/.emacs.d/")                ; directory where config is
+
 ;;; THEMES
-(load-file "~/.emacs.d/color-theme/themes/tango.el")  ; loads tango color theme
+(require 'color-theme)                                ; loads color theme
+(require 'color-theme-tango)                          ; loads tango color theme
 (color-theme-tango)                                   ; sets color theme to tango
 
 ;; EDITING OPTIONS
