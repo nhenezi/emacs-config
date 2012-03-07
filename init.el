@@ -17,6 +17,7 @@
 (menu-bar-mode -1)                                    ; hides menu bar
 (tool-bar-mode -1)                                    ; hides tool bar
 (scroll-bar-mode -1)                                  ; hides scroll bar
+(setq make-backup-files nil)                          ; disables backup files
 
 ;; FUNCTIONS
 (defun toggle-fullscreen ()                           ; full screen mode
@@ -35,3 +36,4 @@
 ;; Python Hook
 (add-hook 'python-mode-hook '(lambda () 
  (setq python-indent 2)))
+
