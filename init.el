@@ -18,6 +18,8 @@
 (tool-bar-mode -1)                                    ; hides tool bar
 (scroll-bar-mode -1)                                  ; hides scroll bar
 (setq make-backup-files nil)                          ; disables backup files
+(require 'coffee-mode)                                ; enables coffee-mode
+(add-hook 'coffee-mode-hook '(lambda () (coffee-cos-mode t))) ;compile on save for coffee mode
 
 ;; FUNCTIONS
 (defun toggle-fullscreen ()                           ; full screen mode
