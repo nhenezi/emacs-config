@@ -8,6 +8,7 @@
 ;; EDITING OPTIONS
 (custom-set-variables '(standard-indent 2))           ; sets default indent to 2
 (setq-default tab-width 2)                            ; set tab width to 2 for all buffers
+(setq-default indent-tabs-mode nil)                   ; use spaces for indent
 (require 'uniquify)                                   ; requiered for unique names
 (setq uniquify-buffer-name-style 'forward)            ; defines style for unique names
 (setq uniquify-strip-common-suffix t)                 ; stripes slashes for faster switching
@@ -17,6 +18,7 @@
 (menu-bar-mode -1)                                    ; hides menu bar
 (tool-bar-mode -1)                                    ; hides tool bar
 (scroll-bar-mode -1)                                  ; hides scroll bar
+(setq x-select-enable-clipboard t)                    ; copy outside emacs
 (setq make-backup-files nil)                          ; disables backup files
 (require 'coffee-mode)                                ; enables coffee-mode
 (add-hook 'coffee-mode-hook '(lambda () (coffee-cos-mode t))) ;compile on save for coffee mode
