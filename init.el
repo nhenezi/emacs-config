@@ -1,6 +1,6 @@
 (add-to-list 'load-path "~/.emacs.d/")                ; directory where config is
 
-;;; THEMES
+;; THEMES
 (require 'color-theme)                                ; loads color theme
 (require 'color-theme-tango)                          ; loads tango color theme
 (color-theme-tango)                                   ; sets color theme to tango
@@ -20,8 +20,6 @@
 (scroll-bar-mode -1)                                  ; hides scroll bar
 (setq x-select-enable-clipboard t)                    ; copy outside emacs
 (setq make-backup-files nil)                          ; disables backup files
-(require 'coffee-mode)                                ; enables coffee-mode
-;(add-hook 'coffee-mode-hook '(lambda () (coffee-cos-mode t))) ;compile on save for coffee mode
 
 ;; FUNCTIONS
 (defun toggle-fullscreen ()                           ; full screen mode
@@ -43,6 +41,10 @@
 
 ;; JAVASCRIPT
 (setq js-indent-level 2)
+
+;; COFFEESCRIPT
+(require 'coffee-mode)
+;(add-hook 'coffee-mode-hook '(lambda () (coffee-cos-mode t))) ;compile on save for coffee mode
 
 ;; CSS
 (require 'less-css-mode)
