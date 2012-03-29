@@ -41,3 +41,6 @@
 (add-hook 'python-mode-hook '(lambda () 
  (setq python-indent 2)))
 
+;; PHP
+(autoload 'php-mode "php-mode" "Major mode for php." t)
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode ))
