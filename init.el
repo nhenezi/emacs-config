@@ -21,7 +21,7 @@
 (setq x-select-enable-clipboard t)                    ; copy outside emacs
 (setq make-backup-files nil)                          ; disables backup files
 (require 'coffee-mode)                                ; enables coffee-mode
-(add-hook 'coffee-mode-hook '(lambda () (coffee-cos-mode t))) ;compile on save for coffee mode
+;(add-hook 'coffee-mode-hook '(lambda () (coffee-cos-mode t))) ;compile on save for coffee mode
 
 ;; FUNCTIONS
 (defun toggle-fullscreen ()                           ; full screen mode
@@ -41,3 +41,8 @@
 (add-hook 'python-mode-hook '(lambda () 
  (setq python-indent 2)))
 
+;; JAVASCRIPT
+(setq js-indent-level 2)
+
+;; CSS
+(require 'less-css-mode)
