@@ -46,3 +46,7 @@
 
 ;; CSS
 (require 'less-css-mode)
+
+;; PHP
+(autoload 'php-mode "php-mode" "Major mode for php." t)
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode ))
