@@ -21,6 +21,12 @@
 (setq x-select-enable-clipboard t)                    ; copy outside emacs
 (setq make-backup-files nil)                          ; disables backup files
 
+
+;; C/C++
+(setq c-default-style "bsd"
+          c-basic-offset 2)
+(c-set-offset 'substatement-open 0)
+
 ;; FUNCTIONS
 (defun toggle-fullscreen ()                           ; full screen mode
   (interactive)
