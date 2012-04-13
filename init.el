@@ -1,5 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/")                ; directory where config is
-
+#test
 ;; THEMES
 (require 'color-theme)                                ; loads color theme
 (require 'color-theme-tango)                          ; loads tango color theme
