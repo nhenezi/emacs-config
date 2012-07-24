@@ -64,3 +64,9 @@
 ;; PHP
 (autoload 'php-mode "php-mode" "Major mode for php." t)
 (add-to-list 'auto-mode-alist '("\\.php$" . php-mode ))
+
+;; MarkDown
+(autoload 'markdown-mode "markdown.el"
+   "Major mode for editing Markdown files" t)
+(setq auto-mode-alist
+   (cons '("\\.md" . markdown-mode) auto-mode-alist))
