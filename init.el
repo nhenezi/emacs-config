@@ -8,7 +8,7 @@
 ;; EDITING OPTIONS
 (custom-set-variables '(standard-indent 2))    ; sets default indent to 2
 (setq-default tab-width 2)                     ; set tab width to 2 for all buffers
-(setq-default indent-tabs-mode nil)            ; use spaces for indent
+;(setq-default indent-tabs-mode nil)            ; use spaces for indent
 (require 'uniquify)                            ; requiered for unique names
 (setq uniquify-buffer-name-style 'forward)     ; defines style for unique names
 (setq uniquify-strip-common-suffix t)          ; stripes slashes for faster switching
@@ -20,7 +20,6 @@
 (scroll-bar-mode -1)                           ; hides scroll bar
 (setq x-select-enable-clipboard t)             ; copy outside emacs
 (setq make-backup-files nil)                   ; disables backup files
-
 
 ;; Fast moving trough windows
 (global-set-key (kbd "C-x <up>") 'windmove-up)
@@ -79,3 +78,19 @@
 ;(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 ;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
 (add-hook 'haskell-mode-hook 'font-lock-mode)
+
+;; COQ
+(load-file "~/.emacs.d/proofgeneral/generic/proof-site.el")
+
+;; Cojure
+(require 'clojure-mode)
+
+(defun clone-buffer-and-narrow-to-function ()
+	(interactive)
+	(clone-indirect-buffer-other-window (which-function) 'pop-to-buffer)
+	(mark-defun) ; works not only in emacs-lisp, but C++, Python, ...
+	(narrow-to-region (mark) (point))
+	(pop-mark)
+	(other-window 1))
+(define-key global-map (kbd "C-x 4 n") 'clone-buffer-and-narrow-to-function) ; or whatever key you prefer
+(put 'narrow-to-region 'disabled nil)
