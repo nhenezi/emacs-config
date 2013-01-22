@@ -13,13 +13,14 @@
 (setq uniquify-buffer-name-style 'forward)     ; defines style for unique names
 (setq uniquify-strip-common-suffix t)          ; stripes slashes for faster switching
 (require 'linum)                               ; required for line numbering
-(global-linum-mode)                            ; enables line numbering 
+(global-linum-mode)                            ; enables line numbering
 (put 'dired-find-alternate-file 'disabled nil) ; dired uses only one buffer
 (menu-bar-mode -1)                             ; hides menu bar
 (tool-bar-mode -1)                             ; hides tool bar
 (scroll-bar-mode -1)                           ; hides scroll bar
 (setq x-select-enable-clipboard t)             ; copy outside emacs
 (setq make-backup-files nil)                   ; disables backup files
+(desktop-save-mode 1)
 
 ;; Fast moving trough windows
 (global-set-key (kbd "C-x <up>") 'windmove-up)
@@ -47,7 +48,7 @@
 
 ;; PYTHON
 ;; Python Hook
-(add-hook 'python-mode-hook '(lambda () 
+(add-hook 'python-mode-hook '(lambda ()
  (setq python-indent 2)))
 
 ;; JAVASCRIPT
