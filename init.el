@@ -94,3 +94,8 @@
 	(other-window 1))
 (define-key global-map (kbd "C-x 4 n") 'clone-buffer-and-narrow-to-function) ; or whatever key you prefer
 (put 'narrow-to-region 'disabled nil)
+
+;; org
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
